@@ -58,13 +58,37 @@
 			children = (
 				CB331AA32448FDEA004632E4 /* AppDelegate.swift */,
 				CB331AA52448FDEA004632E4 /* SceneDelegate.swift */,
-				CB331AA72448FDEA004632E4 /* ViewController.swift */,
-				CB331AA92448FDEA004632E4 /* Main.storyboard */,
+				CB331AB92448FE11004632E4 /* Model */,
+				CB331AB72448FE03004632E4 /* Controller */,
+				CB331AB82448FE0A004632E4 /* View */,
 				CB331AAC2448FDEC004632E4 /* Assets.xcassets */,
 				CB331AAE2448FDEC004632E4 /* LaunchScreen.storyboard */,
 				CB331AB12448FDEC004632E4 /* Info.plist */,
 			);
 			path = ShoppingApp;
+			sourceTree = "<group>";
+		};
+		CB331AB72448FE03004632E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB331AA72448FDEA004632E4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB331AB82448FE0A004632E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB331AA92448FDEA004632E4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB331AB92448FE11004632E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
