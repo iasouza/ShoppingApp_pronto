@@ -37,9 +37,9 @@ struct ShoppingBrain{
         return ano
     }
  
-    func getPreco (nomeBanda: String) -> Float{
+    func getPreco (nomeBanda: String) -> Double{
      
-        var preco: Float = 0.0
+        var preco: Double = 0.0
      
         for disco in galeria{
             if disco.nomeBanda == nomeBanda{

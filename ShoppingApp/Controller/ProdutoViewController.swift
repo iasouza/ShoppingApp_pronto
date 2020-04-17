@@ -21,7 +21,7 @@ class ProdutoViewController: UIViewController {
     var nomeBanda: String?
     var nomeDisco: String?
     var ano: String?
-    var preco: Float?
+    var preco: Double?
     var capa: String?
     var quantidade = 0.0
     
@@ -47,14 +47,25 @@ class ProdutoViewController: UIViewController {
         quantidadeLabel.text = String(format: "%.0f",qtdStepper.value)
     }
     
-    /*
+    @IBAction func comprarProduto(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToCart", sender: nil)
+    }
+    
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+      
+        if segue.identifier == "goToCart"{
+            let destinationVC = segue.destination as! CarrinhoViewController
+            destinationVC.nomeDisco = nomeDisco
+            destinationVC.capa = capa
+            destinationVC.preco = preco
+            destinationVC.quantidade = quantidade
+        }
     }
-    */
+    
 
 }

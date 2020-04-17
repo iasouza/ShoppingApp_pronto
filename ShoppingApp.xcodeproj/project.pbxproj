@@ -17,6 +17,7 @@
 		CB331ABD2449C840004632E4 /* ProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABC2449C840004632E4 /* ProdutoViewController.swift */; };
 		CB331ABF2449CD70004632E4 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABE2449CD70004632E4 /* Produto.swift */; };
 		CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */; };
+		CB331AC32449E66B004632E4 /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC22449E66B004632E4 /* Compra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CB331ABC2449C840004632E4 /* ProdutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoViewController.swift; sourceTree = "<group>"; };
 		CB331ABE2449CD70004632E4 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBrain.swift; sourceTree = "<group>"; };
+		CB331AC22449E66B004632E4 /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				CB331ABE2449CD70004632E4 /* Produto.swift */,
 				CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */,
+				CB331AC22449E66B004632E4 /* Compra.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB331ABD2449C840004632E4 /* ProdutoViewController.swift in Sources */,
+				CB331AC32449E66B004632E4 /* Compra.swift in Sources */,
 				CB331ABF2449CD70004632E4 /* Produto.swift in Sources */,
 				CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */,
 				CB331ABB2449C82C004632E4 /* CarrinhoViewController.swift in Sources */,

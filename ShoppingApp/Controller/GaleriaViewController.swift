@@ -42,5 +42,7 @@ class GaleriaViewController: UIViewController {
         }
     }
    
+    @IBAction func unwindToGaleria(segue:UIStoryboardSegue) { }
+    
 }
 
