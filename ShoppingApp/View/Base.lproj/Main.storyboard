@@ -2,15 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Galeria View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GaleriaViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,18 +39,27 @@
                                                         <state key="normal" title="ACDC" backgroundImage="ACDC">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selecionaProduto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Stb-BX-YKj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-J6-89d">
                                                         <rect key="frame" x="138" y="0.0" width="118" height="127"/>
                                                         <state key="normal" title="Blitz" backgroundImage="Blitz">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selecionaProduto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKq-aH-Whx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuh-YS-cVC">
                                                         <rect key="frame" x="276" y="0.0" width="118" height="127"/>
                                                         <state key="normal" title="Bon Jovi" backgroundImage="BonJovi">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selecionaProduto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9a-9J-TM7"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -148,42 +157,45 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="FvS-5J-S72" kind="presentation" identifier="goToProduct" id="Sfm-hg-Egw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-88" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Produto View Controller-->
         <scene sceneID="hmT-wd-DVN">
             <objects>
-                <viewController id="FvS-5J-S72" sceneMemberID="viewController">
+                <viewController id="FvS-5J-S72" customClass="ProdutoViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rbm-cv-HI1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="hkq-ui-PjF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZZO-WA-Gfl">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="122.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-4e-Xxs">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Disco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9c-NK-OvL">
-                                                        <rect key="frame" x="95" y="0.0" width="224.5" height="33.5"/>
+                                                        <rect key="frame" x="95" y="0.0" width="224.5" height="40"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Banda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6M-IF-yNs">
-                                                        <rect key="frame" x="127.5" y="34.5" width="159" height="33.5"/>
+                                                        <rect key="frame" x="127.5" y="41" width="159" height="40.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ano do Disco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4se-oW-cgj">
-                                                        <rect key="frame" x="156" y="69" width="102" height="33.5"/>
+                                                        <rect key="frame" x="156" y="82.5" width="102" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -198,7 +210,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cn1-JP-B3r">
-                                        <rect key="frame" x="79" y="136.5" width="256" height="309.5"/>
+                                        <rect key="frame" x="79" y="156.5" width="256" height="309.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACDC" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-XM-Tr5">
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="256.5"/>
@@ -219,7 +231,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="I38-dW-naa">
-                                        <rect key="frame" x="108.5" y="480" width="197.5" height="102.5"/>
+                                        <rect key="frame" x="108.5" y="500" width="197.5" height="102.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-0M-jai">
                                                 <rect key="frame" x="54" y="0.0" width="89" height="20.5"/>
@@ -235,14 +247,17 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="v04-RI-8MQ">
                                                 <rect key="frame" x="51.5" y="70.5" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="mudouStepper:" destination="FvS-5J-S72" eventType="valueChanged" id="9ll-a8-3BX"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4Z-GG-Ipz">
-                                        <rect key="frame" x="0.0" y="616.5" width="414" height="201.5"/>
+                                        <rect key="frame" x="0.0" y="636.5" width="414" height="171.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7hM-R8-ZOq">
-                                                <rect key="frame" x="67" y="83" width="280" height="36"/>
+                                                <rect key="frame" x="67" y="68" width="280" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVi-eW-Xjw">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
@@ -254,6 +269,9 @@
                                                         <state key="normal" title="Voltar">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="voltar:" destination="FvS-5J-S72" eventType="touchUpInside" id="U4f-xU-BWj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cH-uw-ilv">
                                                         <rect key="frame" x="180" y="0.0" width="100" height="36"/>
@@ -294,10 +312,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rhM-bX-5f7"/>
                     </view>
+                    <connections>
+                        <outlet property="nomeBandaLabel" destination="Z6M-IF-yNs" id="7gy-hg-W2Q"/>
+                        <outlet property="quantDesejaLabel" destination="NX9-uI-bMw" id="Boc-Xo-qJJ"/>
+                        <outlet property="stepper" destination="v04-RI-8MQ" id="4e2-UK-wfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gb-pN-0Md" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775.36231884057975" y="137.94642857142856"/>
+            <point key="canvasLocation" x="684" y="138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6H6-hb-8BV">
@@ -311,41 +334,41 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrinho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PH-61-NgQ">
-                                        <rect key="frame" x="134" y="0.0" width="146.5" height="41"/>
+                                        <rect key="frame" x="134" y="0.0" width="146.5" height="51.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Disco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwW-o9-gzU">
-                                        <rect key="frame" x="140.5" y="67" width="133.5" height="22.5"/>
+                                        <rect key="frame" x="140.5" y="77.5" width="133.5" height="28.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACDC" translatesAutoresizingMaskIntoConstraints="NO" id="mRl-ng-Hfo">
-                                        <rect key="frame" x="104" y="115.5" width="206" height="206"/>
+                                        <rect key="frame" x="104" y="132" width="206" height="206"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="206" id="0J0-sk-G2Y"/>
                                             <constraint firstAttribute="width" constant="206" id="N9w-Pa-3TV"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="lR5-og-sKK">
-                                        <rect key="frame" x="0.0" y="347.5" width="414" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="364" width="414" height="35.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-2C-aBd">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="2.5" width="112" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG6-qu-e0k">
-                                                <rect key="frame" x="201" y="0.0" width="12.5" height="28.5"/>
+                                                <rect key="frame" x="201" y="2.5" width="12.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t93-c0-Nh4">
-                                                <rect key="frame" x="302.5" y="0.0" width="111.5" height="28.5"/>
+                                                <rect key="frame" x="302.5" y="2.5" width="111.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -359,16 +382,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="e0b-sC-A65">
-                                        <rect key="frame" x="83" y="402" width="248.5" height="31"/>
+                                        <rect key="frame" x="83" y="425.5" width="248.5" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total  = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0x-gQ-PMN">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="3" width="95.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="valorTotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-DW-HkZ">
-                                                <rect key="frame" x="121.5" y="0.0" width="127" height="31"/>
+                                                <rect key="frame" x="121.5" y="3" width="127" height="33"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -379,10 +402,10 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJX-xj-aPh">
-                                        <rect key="frame" x="0.0" y="459" width="414" height="359"/>
+                                        <rect key="frame" x="0.0" y="490.5" width="414" height="327.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gb-Ko-3Lb">
-                                                <rect key="frame" x="167" y="273" width="80" height="36"/>
+                                                <rect key="frame" x="167" y="241.5" width="80" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="4vH-7e-UML"/>
