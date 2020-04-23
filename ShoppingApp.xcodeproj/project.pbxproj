@@ -10,7 +10,6 @@
 		CB331AA42448FDEA004632E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA32448FDEA004632E4 /* AppDelegate.swift */; };
 		CB331AA62448FDEA004632E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA52448FDEA004632E4 /* SceneDelegate.swift */; };
 		CB331AA82448FDEA004632E4 /* GaleriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */; };
-		CB331AAB2448FDEA004632E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB331AA92448FDEA004632E4 /* Main.storyboard */; };
 		CB331AAD2448FDEC004632E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB331AAC2448FDEC004632E4 /* Assets.xcassets */; };
 		CB331AB02448FDEC004632E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB331AAE2448FDEC004632E4 /* LaunchScreen.storyboard */; };
 		CB331ABB2449C82C004632E4 /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABA2449C82C004632E4 /* CarrinhoViewController.swift */; };
@@ -18,6 +17,7 @@
 		CB331ABF2449CD70004632E4 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABE2449CD70004632E4 /* Produto.swift */; };
 		CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */; };
 		CB331AC32449E66B004632E4 /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC22449E66B004632E4 /* Compra.swift */; };
+		CB4247262451257000ECC112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4247242451256F00ECC112 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,6 @@
 		CB331AA32448FDEA004632E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB331AA52448FDEA004632E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriaViewController.swift; sourceTree = "<group>"; };
-		CB331AAA2448FDEA004632E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB331AAC2448FDEC004632E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB331AAF2448FDEC004632E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB331AB12448FDEC004632E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		CB331ABE2449CD70004632E4 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBrain.swift; sourceTree = "<group>"; };
 		CB331AC22449E66B004632E4 /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
+		CB4247252451256F00ECC112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 		CB331AB82448FE0A004632E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB331AA92448FDEA004632E4 /* Main.storyboard */,
+				CB4247242451256F00ECC112 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,9 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4247262451257000ECC112 /* Main.storyboard in Resources */,
 				CB331AB02448FDEC004632E4 /* LaunchScreen.storyboard in Resources */,
 				CB331AAD2448FDEC004632E4 /* Assets.xcassets in Resources */,
-				CB331AAB2448FDEA004632E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,20 +191,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB331AA92448FDEA004632E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB331AAA2448FDEA004632E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB331AAE2448FDEC004632E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CB331AAF2448FDEC004632E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CB4247242451256F00ECC112 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB4247252451256F00ECC112 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

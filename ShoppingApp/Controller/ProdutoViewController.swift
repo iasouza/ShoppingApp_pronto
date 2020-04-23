@@ -10,6 +10,7 @@ import UIKit
 
 class ProdutoViewController: UIViewController {
 
+
     @IBOutlet weak var bandaLabel: UILabel!
     @IBOutlet weak var discoLabel: UILabel!
     @IBOutlet weak var anoLabel: UILabel!
@@ -23,7 +24,7 @@ class ProdutoViewController: UIViewController {
     var ano: String?
     var preco: Double?
     var capa: String?
-    var quantidade = 0.0
+    var quantidade = 1.0
     
     
     override func viewDidLoad() {
@@ -67,5 +68,8 @@ class ProdutoViewController: UIViewController {
         }
     }
     
+
+    
+
 
 }

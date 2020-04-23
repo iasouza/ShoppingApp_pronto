@@ -29,26 +29,14 @@ class CarrinhoViewController: UIViewController {
         nomeDiscoLabel.text = nomeDisco
         precoLabel.text = String(format:"R$ %.2f",preco ?? 0.00)
         capaDisco.image = UIImage(named: capa ?? "ACDC.jpg")
-        quantidadeLabel.text = String(format:"%.0f",quantidade ?? 0.00)
+        quantidadeLabel.text = String(format:"%.0f",quantidade ?? 1.00)
         var compra = Compra(quantidade: quantidade!, preco: preco!)
         valorTotal = compra.calculaTotal()
         valorTotalLabel.text = String(format: "R$ %.2f", valorTotal ?? 0.00)
-        
-        
     }
     
     @IBAction func finalizarCompra(_ sender: Any) {
       performSegue(withIdentifier: "unwindSegueToGaleria", sender: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
