@@ -11,12 +11,14 @@ import UIKit
 class GaleriaViewController: UIViewController {
 
     var shoppingBrain = ShoppingBrain()
-    
+    var nomeBandaTeste: String!
     var nomeDisco: String!
     var nomeBanda: String!
     var capaDisco: String!
     var ano: String!
     var preco: Double!
+    
+    var quantidade: Int = 1
     
     @IBOutlet weak var nomeArtista: UILabel!
     override func viewDidLoad() {
@@ -49,15 +51,24 @@ extension GaleriaViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return shoppingBrain.galeria.count
+        return quantidade
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! GaleriaTableViewCell
+        quantidade = 0
+        for banda in shoppingBrain.galeria{
+            if banda.nomeBanda == nomeBandaTeste!{
+                quantidade += 1
+                cell.albumImageView.image = UIImage(named: banda.capa)
+                cell.nameLabel.text = banda.nomeDisco
+                cell.bandaLabel.text = banda.nomeBanda
+            }
+        }
+        if quantidade == 0{
+            cell.nameLabel.text = "Não encontrado"
+        }
         
-        cell.albumImageView.image = UIImage(named: shoppingBrain.galeria[indexPath.row].capa)
-        cell.nameLabel.text = shoppingBrain.galeria[indexPath.row].nomeDisco
-        cell.bandaLabel.text = shoppingBrain.galeria[indexPath.row].nomeBanda
         return cell
     }
     

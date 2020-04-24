@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zjS-Kg-d8V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OrE-iG-TaJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="138"/>
+            <point key="canvasLocation" x="821.73913043478262" y="137.94642857142856"/>
         </scene>
         <!--Galeria View Controller-->
         <scene sceneID="teU-gw-fd7">
@@ -199,12 +199,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="53z-OE-xdc">
-                                <rect key="frame" x="0.0" y="141" width="414" height="706"/>
+                                <rect key="frame" x="0.0" y="164" width="414" height="683"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha seu vinil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4Y-Ob-Z6j">
-                                <rect key="frame" x="0.0" y="64" width="414" height="48"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,6 +218,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="81Q-7w-s0P"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oW5-dt-sHM"/>
                     <connections>
                         <outlet property="nomeArtista" destination="k4Y-Ob-Z6j" id="naY-8J-KQ1"/>
                         <outlet property="tableView" destination="53z-OE-xdc" id="Fa5-Ok-Wky"/>
@@ -226,29 +227,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZa-YP-4a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88.405797101449281" y="784.82142857142856"/>
+            <point key="canvasLocation" x="462" y="831"/>
         </scene>
-        <!--View Controller-->
+        <!--Pesquisa View Controller-->
         <scene sceneID="RJD-F5-Lye">
             <objects>
-                <viewController id="jaW-VH-xvZ" sceneMemberID="viewController">
+                <viewController id="jaW-VH-xvZ" customClass="PesquisaViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Im8-QJ-tee">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o nome do artista!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-Mh-Rkv">
-                                <rect key="frame" x="0.0" y="264.5" width="414" height="95.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o nome da banda:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-Mh-Rkv">
+                                <rect key="frame" x="0.0" y="238" width="414" height="95.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" placeholder="Artista" translatesAutoresizingMaskIntoConstraints="NO" id="mEv-Rc-YXK">
-                                <rect key="frame" x="20" y="420" width="374" height="56"/>
-                                <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB5-va-rhK">
-                                <rect key="frame" x="130" y="536" width="154" height="36"/>
+                                <rect key="frame" x="130" y="467.5" width="154" height="36"/>
                                 <color key="backgroundColor" name="Botoes"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="t4M-re-8Qg"/>
@@ -257,60 +253,74 @@
                                 <state key="normal" title="Pesquisar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="PesquisarBanda:" destination="jaW-VH-xvZ" eventType="touchUpInside" id="lRr-nR-RkJ"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pesquisar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCd-8v-Qxc">
+                                <rect key="frame" x="40" y="383.5" width="334" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="BfN-kk-D4P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hCd-8v-Qxc" secondAttribute="trailing" constant="40" id="3mZ-Md-Rzz"/>
                             <constraint firstItem="rB5-va-rhK" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="5GY-jZ-3P1"/>
+                            <constraint firstItem="hCd-8v-Qxc" firstAttribute="top" secondItem="PhU-Mh-Rkv" secondAttribute="bottom" constant="50" id="BI9-dF-zhg"/>
                             <constraint firstItem="rB5-va-rhK" firstAttribute="leading" secondItem="BfN-kk-D4P" secondAttribute="leading" constant="130" id="ODJ-Wl-2op"/>
-                            <constraint firstItem="BfN-kk-D4P" firstAttribute="trailing" secondItem="mEv-Rc-YXK" secondAttribute="trailing" constant="20" id="Trr-Op-JHx"/>
-                            <constraint firstItem="mEv-Rc-YXK" firstAttribute="leading" secondItem="BfN-kk-D4P" secondAttribute="leading" constant="20" id="Wbe-Ah-Oza"/>
-                            <constraint firstItem="mEv-Rc-YXK" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="X39-4P-Wr4"/>
+                            <constraint firstItem="hCd-8v-Qxc" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="ZC9-fc-HPq"/>
                             <constraint firstItem="PhU-Mh-Rkv" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="a5s-fz-LUn"/>
-                            <constraint firstItem="mEv-Rc-YXK" firstAttribute="centerY" secondItem="Im8-QJ-tee" secondAttribute="centerY" id="bjs-Wd-crd"/>
-                            <constraint firstItem="PhU-Mh-Rkv" firstAttribute="trailing" secondItem="BfN-kk-D4P" secondAttribute="trailing" id="iJl-nR-xRg"/>
-                            <constraint firstItem="rB5-va-rhK" firstAttribute="top" secondItem="mEv-Rc-YXK" secondAttribute="bottom" constant="60" id="nMr-yo-Nnu"/>
-                            <constraint firstItem="mEv-Rc-YXK" firstAttribute="top" secondItem="PhU-Mh-Rkv" secondAttribute="bottom" constant="60" id="oBq-bh-Tac"/>
-                            <constraint firstItem="PhU-Mh-Rkv" firstAttribute="leading" secondItem="BfN-kk-D4P" secondAttribute="leading" id="oJ8-wx-hUd"/>
+                            <constraint firstItem="rB5-va-rhK" firstAttribute="top" secondItem="hCd-8v-Qxc" secondAttribute="bottom" constant="50" id="fp4-YA-Shu"/>
+                            <constraint firstItem="PhU-Mh-Rkv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BfN-kk-D4P" secondAttribute="trailing" id="iJl-nR-xRg"/>
+                            <constraint firstItem="PhU-Mh-Rkv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BfN-kk-D4P" secondAttribute="leading" id="oJ8-wx-hUd"/>
+                            <constraint firstItem="PhU-Mh-Rkv" firstAttribute="top" secondItem="BfN-kk-D4P" secondAttribute="top" constant="150" id="pRq-vJ-2uJ"/>
+                            <constraint firstItem="hCd-8v-Qxc" firstAttribute="leading" secondItem="BfN-kk-D4P" secondAttribute="leading" constant="40" id="rbN-fR-zqN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BfN-kk-D4P"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PjC-UW-iHI"/>
+                    <connections>
+                        <outlet property="pesquisaTextField" destination="hCd-8v-Qxc" id="ySd-OX-uj3"/>
+                        <segue destination="zjS-Kg-d8V" kind="show" identifier="goToGaleria" id="TTC-16-G4J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdR-xd-MCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-939.13043478260875" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-28.985507246376812" y="137.94642857142856"/>
         </scene>
         <!--Produto View Controller-->
         <scene sceneID="hmT-wd-DVN">
             <objects>
                 <viewController id="FvS-5J-S72" customClass="ProdutoViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rbm-cv-HI1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="hkq-ui-PjF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZZO-WA-Gfl">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-4e-Xxs">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Disco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9c-NK-OvL">
-                                                        <rect key="frame" x="102" y="0.0" width="210.5" height="36"/>
+                                                        <rect key="frame" x="102" y="0.0" width="210.5" height="24.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Banda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6M-IF-yNs">
-                                                        <rect key="frame" x="127.5" y="37" width="159" height="36"/>
+                                                        <rect key="frame" x="127.5" y="25.5" width="159" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ano do Disco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4se-oW-cgj">
-                                                        <rect key="frame" x="156" y="74" width="102" height="36"/>
+                                                        <rect key="frame" x="156" y="51.5" width="102" height="24.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -324,7 +334,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cn1-JP-B3r">
-                                        <rect key="frame" x="79" y="144" width="256" height="312.5"/>
+                                        <rect key="frame" x="79" y="110" width="256" height="312.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACDC" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-XM-Tr5">
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="256.5"/>
@@ -345,7 +355,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="I38-dW-naa">
-                                        <rect key="frame" x="108.5" y="490.5" width="197.5" height="102.5"/>
+                                        <rect key="frame" x="108.5" y="456.5" width="197.5" height="102.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-0M-jai">
                                                 <rect key="frame" x="54" y="0.0" width="89" height="20.5"/>
@@ -368,7 +378,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4Z-GG-Ipz">
-                                        <rect key="frame" x="0.0" y="627" width="414" height="181"/>
+                                        <rect key="frame" x="0.0" y="593" width="414" height="181"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7hM-R8-ZOq">
                                                 <rect key="frame" x="67" y="72.5" width="280" height="36"/>
@@ -416,7 +426,6 @@
                                     <constraint firstAttribute="trailing" secondItem="ZZO-WA-Gfl" secondAttribute="trailing" id="4Jl-vS-E6u"/>
                                     <constraint firstAttribute="trailing" secondItem="r4Z-GG-Ipz" secondAttribute="trailing" id="FnV-ym-dHd"/>
                                     <constraint firstItem="I38-dW-naa" firstAttribute="centerX" secondItem="hkq-ui-PjF" secondAttribute="centerX" id="Wxn-yx-Ldz"/>
-                                    <constraint firstItem="ZZO-WA-Gfl" firstAttribute="top" secondItem="hkq-ui-PjF" secondAttribute="top" constant="20" id="hHb-XC-4PG"/>
                                     <constraint firstItem="ZZO-WA-Gfl" firstAttribute="leading" secondItem="hkq-ui-PjF" secondAttribute="leading" id="qHW-wh-pz2"/>
                                     <constraint firstItem="r4Z-GG-Ipz" firstAttribute="leading" secondItem="hkq-ui-PjF" secondAttribute="leading" id="scb-Rz-b8S"/>
                                 </constraints>
@@ -444,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gb-pN-0Md" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="138"/>
+            <point key="canvasLocation" x="1592.753623188406" y="137.94642857142856"/>
         </scene>
         <!--Carrinho View Controller-->
         <scene sceneID="6H6-hb-8BV">
@@ -575,11 +584,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOg-7i-mvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="95A-cF-Zyh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1418.840579710145" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2328.985507246377" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pHi-kN-FJt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OrE-iG-TaJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cPZ-oO-vOj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jaW-VH-xvZ" kind="relationship" relationship="rootViewController" id="3JH-HU-Dnj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgn-Ie-piw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939.13043478260875" y="137.94642857142856"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Sfm-hg-Egw"/>
+        <segue reference="sB3-0F-Ko7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ACDC" width="256.5" height="256.5"/>

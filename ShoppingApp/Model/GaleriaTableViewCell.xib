@@ -18,41 +18,33 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QjP-8V-UT2">
-                        <rect key="frame" x="10" y="10" width="356" height="110"/>
+                        <rect key="frame" x="10" y="10" width="356" height="101"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UdP-Lx-nq9">
-                                <rect key="frame" x="5" y="5" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="0.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="JnP-Am-GFA"/>
                                     <constraint firstAttribute="height" constant="100" id="q61-cs-MHG"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gye-9z-eO9">
-                                <rect key="frame" x="113" y="32" width="243" height="46"/>
+                                <rect key="frame" x="108" y="25" width="248" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Disco" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZS-JE-8Ic">
-                                        <rect key="frame" x="0.0" y="0.0" width="243" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Banda" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPI-82-2ly">
-                                        <rect key="frame" x="0.0" y="25.5" width="243" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="248" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="qPI-82-2ly" firstAttribute="top" secondItem="iZS-JE-8Ic" secondAttribute="bottom" constant="5" id="fLk-sz-mxO"/>
-                                </constraints>
                             </stackView>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="UdP-Lx-nq9" secondAttribute="bottom" constant="5" id="I80-l0-84Z"/>
-                            <constraint firstItem="UdP-Lx-nq9" firstAttribute="leading" secondItem="QjP-8V-UT2" secondAttribute="leading" constant="5" id="Iln-Ij-POc"/>
-                            <constraint firstItem="UdP-Lx-nq9" firstAttribute="top" secondItem="QjP-8V-UT2" secondAttribute="top" constant="5" id="uuk-ZP-JiW"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>

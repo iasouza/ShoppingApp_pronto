@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB304C972453226400640AA1 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB304C962453226400640AA1 /* PesquisaViewController.swift */; };
 		CB331AA42448FDEA004632E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA32448FDEA004632E4 /* AppDelegate.swift */; };
 		CB331AA62448FDEA004632E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA52448FDEA004632E4 /* SceneDelegate.swift */; };
 		CB331AA82448FDEA004632E4 /* GaleriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB304C962453226400640AA1 /* PesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
 		CB331AA02448FDEA004632E4 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB331AA32448FDEA004632E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB331AA52448FDEA004632E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */,
 				CB331ABA2449C82C004632E4 /* CarrinhoViewController.swift */,
 				CB331ABC2449C840004632E4 /* ProdutoViewController.swift */,
+				CB304C962453226400640AA1 /* PesquisaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				CB331ABB2449C82C004632E4 /* CarrinhoViewController.swift in Sources */,
 				CB331AA82448FDEA004632E4 /* GaleriaViewController.swift in Sources */,
 				CB331AA42448FDEA004632E4 /* AppDelegate.swift in Sources */,
+				CB304C972453226400640AA1 /* PesquisaViewController.swift in Sources */,
 				CBE819FB245300D600A56972 /* GaleriaTableViewCell.swift in Sources */,
 				CB331AA62448FDEA004632E4 /* SceneDelegate.swift in Sources */,
 			);
