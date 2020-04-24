@@ -61,5 +61,5 @@ struct ShoppingBrain{
            return capa
     }
     
-    
+
 }
