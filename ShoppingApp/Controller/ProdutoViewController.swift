@@ -34,6 +34,13 @@ class ProdutoViewController: UIViewController {
         discoLabel.text = nomeDisco
         anoLabel.text = ano
         precoLabel.text = String(format:"R$ %.2f", preco ?? 0.00)
+        if let capaString = capa{
+            let capaURL = URL(string: capaString)
+            if let capaEnd = capaURL{
+                   capaImage.load(url: capaEnd)
+            }
+        }
+        
         capaImage.image = UIImage(named: capa ?? "ACDC.jpg")
         quantidadeLabel.text = String(format: "%.0f",qtdStepper.value)
         
@@ -67,9 +74,6 @@ class ProdutoViewController: UIViewController {
             destinationVC.quantidade = quantidade
         }
     }
-    
-
-    
-
 
 }
+
