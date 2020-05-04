@@ -9,19 +9,22 @@
 import Foundation
 
 protocol ProdutoManagerDelegate {
-    func didUpdateProduto(_ produtoManager: ProdutoManager, produto: ProdutoModel)
+    func didUpdateProduto(_ produtoManager: ProdutoManager, produtos: [ProdutoModel])
 
 }
 
 struct ProdutoManager{
      
+    
     var delegate: ProdutoManagerDelegate?
     
     let produtoURL = "https://theaudiodb.com/api/v1/json/1/searchalbum.php?"
     
     func fetchProduto(nomeArtista: String){
            
-           let urlString = "\(produtoURL)&s=\(nomeArtista)"
+           let artista = nomeArtista.replacingOccurrences(of: " ", with: "_")
+           let urlString = "\(produtoURL)&s=\(artista)"
+           
            performRequest(with: urlString)
            
        }
@@ -38,30 +41,37 @@ struct ProdutoManager{
                     return
                 }
                 if let safeData = data {
-                    if let produto = self.parseJSON(safeData){
-                        self.delegate?.didUpdateProduto(self, produto: produto)
+                    if let produto = self.parseJSON(safeData) {
+                        self.delegate?.didUpdateProduto(self, produtos: produto)
                     }
                 }
             }
-            
             //4. Start the task
             task.resume()
         }
         
     }
     
-    func parseJSON(_ produtoData: Data)-> ProdutoModel?{
+    func parseJSON(_ produtoData: Data)-> [ProdutoModel]?{
         
         let decoder = JSONDecoder()
+        var cont = 0
+        var produtos: [ProdutoModel] = []
         
         do{
             let decodedData = try decoder.decode(ProdutoData.self, from: produtoData)
-            let album = decodedData.album[0].strAlbum
-            let artista = decodedData.album[0].strArtist
-            let capa = decodedData.album[0].strAlbumThumb
-            let ano = decodedData.album[0].intYearReleased
-            let produto = ProdutoModel(nomeDisco: album, nomeBanda: artista, ano: ano, capa: capa)
-            return produto
+        
+            while cont < decodedData.album.count {
+                let album = decodedData.album[cont].strAlbum ?? "Não encontrado"
+                let artista = decodedData.album[cont].strArtist ?? "Não encontrado"
+                let capa = decodedData.album[cont].strAlbumThumb ?? "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg"
+                let ano = decodedData.album[cont].intYearReleased ?? "Sem ano"
+                let produto = ProdutoModel(nomeDisco: album, nomeBanda: artista, ano: ano, capa: capa)
+                produtos.append(produto)
+                cont += 1
+            }
+            
+            return produtos
         } catch {
             print(error)
             return nil

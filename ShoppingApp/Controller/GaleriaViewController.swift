@@ -9,20 +9,27 @@
 import UIKit
 
 class GaleriaViewController: UIViewController {
-
+    
     var shoppingBrain = ShoppingBrain()
     var nomeBandaTeste: String!
-    var nomeDisco: String = ""
-    var nomeBanda: String = ""
-    var capaDisco: String = ""
-    var ano: String = ""
+    var nomeDisco: [String] = []
+    var nomeBanda: [String] = []
+    var capaDisco: [String] = []
+    var ano: [String] = []
     var preco: Double!
+    var album: String!
+    var artista: String!
+    var capaAlbum: String!
+    var anoAlbum: String!
     
-    var quantidade: Int = 1
-    
+    var produtos: [ProdutoModel] = []
+
     var produtoManager = ProdutoManager()
     
     @IBOutlet weak var nomeArtista: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -31,57 +38,50 @@ class GaleriaViewController: UIViewController {
         produtoManager.delegate = self
         produtoManager.fetchProduto(nomeArtista: nomeBandaTeste!)
     }
- 
-    @IBOutlet weak var tableView: UITableView!
-
-
+    
     // MARK: - Navigation
-
-
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToProduct"{
-            let destinationVC = segue.destination as! ProdutoViewController
-            destinationVC.nomeDisco = nomeDisco
-            destinationVC.nomeBanda = nomeBanda
-            destinationVC.ano = ano
-            destinationVC.preco = preco
-            destinationVC.capa = capaDisco
-        }
+                if segue.identifier == "goToProduct"{
+                    let destinationVC = segue.destination as! ProdutoViewController
+                    destinationVC.nomeDisco = album
+                    destinationVC.nomeBanda = artista
+                    destinationVC.ano = anoAlbum
+                    destinationVC.capa = capaAlbum
+                }
     }
-
+    
 }
 
 extension GaleriaViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return produtos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! GaleriaTableViewCell
         
-       
-        let capa = URL(string: self.capaDisco)
-        
-        cell.nameLabel.text = self.nomeDisco
-        cell.bandaLabel.text = self.nomeBanda
-        if let capaURL = capa{
-               cell.albumImageView.load(url: capaURL)
+            let capa = URL(string: produtos[indexPath.row].capa)
+            
+            cell.nameLabel.text = produtos[indexPath.row].nomeDisco
+            cell.bandaLabel.text = produtos[indexPath.row].nomeBanda
+            if let capaURL = capa{
+                cell.albumImageView.load(url: capaURL)
         }
-     
-        return cell
+         return cell
     }
-    
 }
 
 extension GaleriaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        nomeDisco = produtoManager.
-//        nomeBanda = shoppingBrain.galeria[indexPath.row].nomeBanda
-//        capaDisco = shoppingBrain.galeria[indexPath.row].capa
-//        ano = shoppingBrain.galeria[indexPath.row].ano
-//        preco = shoppingBrain.galeria[indexPath.row].preco
+        anoAlbum = produtos[indexPath.row].ano
+        album = produtos[indexPath.row].nomeDisco
+        artista = produtos[indexPath.row].nomeBanda
+        capaAlbum = produtos[indexPath.row].capa
+        
         self.performSegue(withIdentifier: "goToProduct", sender: nil)
         
         
@@ -90,17 +90,12 @@ extension GaleriaViewController: UITableViewDelegate {
 
 extension GaleriaViewController: ProdutoManagerDelegate{
     
-    func didUpdateProduto(_ produtoManager: ProdutoManager, produto: ProdutoModel)
+    func didUpdateProduto(_ produtoManager: ProdutoManager, produtos: [ProdutoModel])
     {
-       DispatchQueue.main.async {
-            self.nomeDisco = produto.nomeDisco
-            self.nomeBanda = produto.nomeBanda
-            self.capaDisco = produto.capa
-            self.ano = produto.ano
-        
-        self.tableView.reloadData()
-       }
-        
+        DispatchQueue.main.async {
+            self.produtos = produtos
+            self.tableView.reloadData()
+        }
     }
 }
 

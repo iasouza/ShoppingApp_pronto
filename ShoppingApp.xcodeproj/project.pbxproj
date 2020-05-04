@@ -355,6 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C24ZB394W2;
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C24ZB394W2;
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

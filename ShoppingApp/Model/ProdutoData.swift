@@ -14,8 +14,8 @@ struct ProdutoData: Codable{
 }
 
 struct Album: Codable{
-    let strArtist: String
-    let intYearReleased: String
-    let strAlbumThumb: String
-    let strAlbum: String
+    let strArtist: String?
+    let intYearReleased: String?
+    let strAlbumThumb: String?
+    let strAlbum: String?
 }
