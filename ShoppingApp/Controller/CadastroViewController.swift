@@ -13,6 +13,10 @@ class CadastroViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var nomeTextField: UITextField!
+    
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,12 +24,15 @@ class CadastroViewController: UIViewController {
     }
     
     @IBAction func Cadastrar(_ sender: UIButton) {
-        if let email = emailTextField.text,       let password = senhaTextField.text{
+        if let email = emailTextField.text,       let password = senhaTextField.text, let nome = nomeTextField.text{
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in if let e = error {
             print(e.localizedDescription)
         }else{
-            self.performSegue(withIdentifier: "goToSearch", sender: nil)
+            self.performSegue(withIdentifier:
+                "goToSearch", sender: nil)
+            self.defaults.set(nome, forKey: "nome")
+            
         }
       
     }

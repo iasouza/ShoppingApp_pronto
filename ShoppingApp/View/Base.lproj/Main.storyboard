@@ -36,7 +36,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="81Q-7w-s0P"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oW5-dt-sHM"/>
+                    <navigationItem key="navigationItem" id="oW5-dt-sHM">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="3Kj-DN-ZXK">
+                            <connections>
+                                <action selector="fazerLogout:" destination="zjS-Kg-d8V" id="The-vB-xxD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nomeArtista" destination="k4Y-Ob-Z6j" id="naY-8J-KQ1"/>
                         <outlet property="tableView" destination="53z-OE-xdc" id="Fa5-Ok-Wky"/>
@@ -81,9 +87,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-Yz-qyo">
-                                <rect key="frame" x="331" y="104" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-Yz-qyo">
+                                <rect key="frame" x="331" y="108" width="63" height="30"/>
                                 <state key="normal" title="Favoritos"/>
                                 <connections>
                                     <segue destination="zAQ-he-cH6" kind="show" id="JiN-xm-dWJ"/>
@@ -95,6 +100,7 @@
                             <constraint firstItem="BfN-kk-D4P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hCd-8v-Qxc" secondAttribute="trailing" constant="40" id="3mZ-Md-Rzz"/>
                             <constraint firstItem="rB5-va-rhK" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="5GY-jZ-3P1"/>
                             <constraint firstItem="hCd-8v-Qxc" firstAttribute="top" secondItem="PhU-Mh-Rkv" secondAttribute="bottom" constant="50" id="BI9-dF-zhg"/>
+                            <constraint firstItem="hc3-Yz-qyo" firstAttribute="top" secondItem="BfN-kk-D4P" secondAttribute="top" constant="20" id="YUh-OG-Bvo"/>
                             <constraint firstItem="hCd-8v-Qxc" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="ZC9-fc-HPq"/>
                             <constraint firstItem="PhU-Mh-Rkv" firstAttribute="centerX" secondItem="Im8-QJ-tee" secondAttribute="centerX" id="a5s-fz-LUn"/>
                             <constraint firstItem="rB5-va-rhK" firstAttribute="top" secondItem="hCd-8v-Qxc" secondAttribute="bottom" constant="50" id="fp4-YA-Shu"/>
@@ -102,11 +108,19 @@
                             <constraint firstItem="PhU-Mh-Rkv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BfN-kk-D4P" secondAttribute="leading" id="oJ8-wx-hUd"/>
                             <constraint firstItem="PhU-Mh-Rkv" firstAttribute="top" secondItem="BfN-kk-D4P" secondAttribute="top" constant="100" id="pRq-vJ-2uJ"/>
                             <constraint firstItem="hCd-8v-Qxc" firstAttribute="leading" secondItem="BfN-kk-D4P" secondAttribute="leading" constant="40" id="rbN-fR-zqN"/>
+                            <constraint firstItem="BfN-kk-D4P" firstAttribute="trailing" secondItem="hc3-Yz-qyo" secondAttribute="trailing" constant="20" id="slo-rs-Aiz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BfN-kk-D4P"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PjC-UW-iHI"/>
+                    <navigationItem key="navigationItem" id="PjC-UW-iHI">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="uAu-7e-eoy">
+                            <connections>
+                                <action selector="fazerLogout:" destination="jaW-VH-xvZ" id="g2P-Ai-I0Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="chamadaLabel" destination="PhU-Mh-Rkv" id="f4v-OC-huO"/>
                         <outlet property="pesquisaTextField" destination="hCd-8v-Qxc" id="ySd-OX-uj3"/>
                         <segue destination="zjS-Kg-d8V" kind="show" identifier="goToGaleria" id="TTC-16-G4J"/>
                     </connections>
@@ -124,12 +138,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TcK-OE-epf">
-                                <rect key="frame" x="20" y="298" width="374" height="34"/>
+                                <rect key="frame" x="20" y="347" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite uma senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sTu-dE-GMP">
-                                <rect key="frame" x="20" y="362" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite uma senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sTu-dE-GMP">
+                                <rect key="frame" x="20" y="405" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
@@ -140,8 +154,8 @@
                                     <constraint firstAttribute="width" constant="100" id="bWh-W9-uw6"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-TD-1fw">
-                                <rect key="frame" x="167" y="456" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-TD-1fw">
+                                <rect key="frame" x="167" y="482" width="80" height="30"/>
                                 <color key="backgroundColor" name="Botoes"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="JV0-TH-wEW"/>
@@ -152,14 +166,21 @@
                                     <action selector="Cadastrar:" destination="vpe-P8-AUI" eventType="touchUpInside" id="xOJ-zq-wJ1"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-lD-yr4">
+                                <rect key="frame" x="20" y="283" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TcK-OE-epf" firstAttribute="top" secondItem="xvZ-5e-cyN" secondAttribute="bottom" constant="60" id="AJv-sm-F2A"/>
+                            <constraint firstItem="TcK-OE-epf" firstAttribute="top" secondItem="aTL-lD-yr4" secondAttribute="bottom" constant="30" id="AJv-sm-F2A"/>
                             <constraint firstItem="sTu-dE-GMP" firstAttribute="leading" secondItem="evO-ui-Dou" secondAttribute="leading" constant="20" id="AzY-GD-XK3"/>
                             <constraint firstItem="evO-ui-Dou" firstAttribute="trailing" secondItem="TcK-OE-epf" secondAttribute="trailing" constant="20" id="J4a-Kd-fqU"/>
                             <constraint firstItem="xvZ-5e-cyN" firstAttribute="centerX" secondItem="A38-Yu-V16" secondAttribute="centerX" id="OVL-MH-c4O"/>
+                            <constraint firstItem="evO-ui-Dou" firstAttribute="trailing" secondItem="aTL-lD-yr4" secondAttribute="trailing" constant="20" id="Qtb-iX-ntu"/>
                             <constraint firstItem="sTu-dE-GMP" firstAttribute="centerX" secondItem="A38-Yu-V16" secondAttribute="centerX" id="QxS-M0-Bzq"/>
+                            <constraint firstItem="aTL-lD-yr4" firstAttribute="leading" secondItem="evO-ui-Dou" secondAttribute="leading" constant="20" id="cvv-Y1-vQZ"/>
                             <constraint firstItem="xvZ-5e-cyN" firstAttribute="top" secondItem="evO-ui-Dou" secondAttribute="top" constant="50" id="dJ0-Cu-LnV"/>
                             <constraint firstItem="TcK-OE-epf" firstAttribute="centerX" secondItem="A38-Yu-V16" secondAttribute="centerX" id="imM-TD-akV"/>
                             <constraint firstItem="uDs-TD-1fw" firstAttribute="centerX" secondItem="A38-Yu-V16" secondAttribute="centerX" id="lNg-5s-Y81"/>
@@ -167,12 +188,14 @@
                             <constraint firstItem="evO-ui-Dou" firstAttribute="trailing" secondItem="sTu-dE-GMP" secondAttribute="trailing" constant="20" id="mh4-nD-h2X"/>
                             <constraint firstItem="uDs-TD-1fw" firstAttribute="top" secondItem="sTu-dE-GMP" secondAttribute="bottom" constant="60" id="oXq-Nj-tcu"/>
                             <constraint firstItem="sTu-dE-GMP" firstAttribute="top" secondItem="TcK-OE-epf" secondAttribute="bottom" constant="30" id="t6v-Cq-Q6o"/>
+                            <constraint firstItem="aTL-lD-yr4" firstAttribute="top" secondItem="xvZ-5e-cyN" secondAttribute="bottom" constant="45" id="w6y-WW-389"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="evO-ui-Dou"/>
                     </view>
                     <navigationItem key="navigationItem" id="HrU-uH-deH"/>
                     <connections>
                         <outlet property="emailTextField" destination="TcK-OE-epf" id="V6Q-b8-miY"/>
+                        <outlet property="nomeTextField" destination="aTL-lD-yr4" id="8ks-mp-hjg"/>
                         <outlet property="senhaTextField" destination="sTu-dE-GMP" id="mma-kN-nW1"/>
                         <segue destination="jaW-VH-xvZ" kind="show" identifier="goToSearch" id="vPY-0H-xe4"/>
                     </connections>
@@ -231,9 +254,8 @@
                                     <constraint firstItem="4bo-dB-2RN" firstAttribute="leading" secondItem="OKK-ge-vkt" secondAttribute="leading" id="RQK-ZO-cZx"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3n-4p-i5w">
-                                <rect key="frame" x="361" y="108" width="33" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3n-4p-i5w">
+                                <rect key="frame" x="368" y="108" width="26" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="heart" catalog="system">
@@ -248,7 +270,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="FWE-yo-gu0" firstAttribute="trailing" secondItem="OKK-ge-vkt" secondAttribute="trailing" id="Aw5-AA-BXN"/>
+                            <constraint firstItem="s3n-4p-i5w" firstAttribute="top" secondItem="FWE-yo-gu0" secondAttribute="top" constant="20" id="FPc-hW-83R"/>
                             <constraint firstItem="OKK-ge-vkt" firstAttribute="top" secondItem="FWE-yo-gu0" secondAttribute="top" constant="50" id="TNQ-BR-bQR"/>
+                            <constraint firstItem="FWE-yo-gu0" firstAttribute="trailing" secondItem="s3n-4p-i5w" secondAttribute="trailing" constant="20" id="fHH-nH-T1a"/>
                             <constraint firstItem="OKK-ge-vkt" firstAttribute="centerX" secondItem="oRR-h5-yuz" secondAttribute="centerX" id="gbl-pS-efV"/>
                             <constraint firstItem="OKK-ge-vkt" firstAttribute="leading" secondItem="FWE-yo-gu0" secondAttribute="leading" id="rdz-6R-OON"/>
                         </constraints>
@@ -333,7 +357,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAo-gw-6Nr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392.753623188406" y="806.91964285714278"/>
+            <point key="canvasLocation" x="881" y="895"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ega-qN-4AX">
@@ -478,7 +502,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c0g-4a-7Jg"/>
+        <segue reference="vPY-0H-xe4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ACDC" width="256.5" height="256.5"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GaleriaViewController: UIViewController {
     
@@ -52,6 +53,14 @@ class GaleriaViewController: UIViewController {
                 }
     }
     
+    @IBAction func fazerLogout(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print ("Erro no logout: %@", signOutError)
+        }
+    }
 }
 
 extension GaleriaViewController: UITableViewDataSource{

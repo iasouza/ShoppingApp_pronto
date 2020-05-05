@@ -70,24 +70,19 @@ class ProdutoViewController: UIViewController {
         
         
         if estaNaLista == false{
-                
+                self.favoritoBotao.isSelected.toggle()
                 if let messageSender = Auth.auth().currentUser?.email{
                     db.collection("favoritos").addDocument(data: ["sender": messageSender, "Disco": nomeDisco, "Banda": nomeBanda, "Ano": ano, "Capa": capa ]) { (error) in
                         if let e = error {
                             print (e.localizedDescription)
-                        }else{
-                            self.favoritoBotao.isSelected.toggle()
-                            print("Salvo com sucesso")
                         }
                     }
               }
         }else{
+            self.favoritoBotao.isSelected.toggle()
             db.collection("favoritos").document(documentID).delete() { err in
                 if let err = err {
                     print("Error removing document: \(err)")
-                } else {
-                    self.favoritoBotao.isSelected.toggle()
-                    
                 }
             }
         }

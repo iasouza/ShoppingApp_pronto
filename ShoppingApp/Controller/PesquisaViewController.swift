@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class PesquisaViewController: UIViewController, UITextFieldDelegate {
     
+    let defaults = UserDefaults.standard
     
+    @IBOutlet weak var chamadaLabel: UILabel!
     @IBOutlet weak var pesquisaTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pesquisaTextField.delegate = self
         pesquisaTextField.text = ""
+        if let nome = defaults.string(forKey: "nome"){
+            chamadaLabel.text = "Ola, \(nome)! Escolha a banda:"}
     }
     
     @IBAction func PesquisarBanda(_ sender: UIButton) {
@@ -71,6 +76,15 @@ class PesquisaViewController: UIViewController, UITextFieldDelegate {
     }
      return true
     }
+    @IBAction func fazerLogout(_ sender: Any) {
+        do {
+                try Auth.auth().signOut()
+                navigationController?.popToRootViewController(animated: true)
+            } catch let signOutError as NSError {
+                print ("Erro no logout: %@", signOutError)
+            }
+        }
+    
 }
 
 
