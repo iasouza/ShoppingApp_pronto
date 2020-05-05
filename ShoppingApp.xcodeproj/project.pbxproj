@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3F8C10DC3C070EA3B95075 /* Pods_ShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAA7731C19041686F95A9DE /* Pods_ShoppingApp.framework */; };
 		CB304C972453226400640AA1 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB304C962453226400640AA1 /* PesquisaViewController.swift */; };
 		CB304C9924533CF400640AA1 /* ProdutoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB304C9824533CF400640AA1 /* ProdutoManager.swift */; };
 		CB304C9B24533DD100640AA1 /* ProdutoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB304C9A24533DD100640AA1 /* ProdutoData.swift */; };
@@ -22,16 +23,23 @@
 		CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */; };
 		CB331AC32449E66B004632E4 /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC22449E66B004632E4 /* Compra.swift */; };
 		CB4247262451257000ECC112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4247242451256F00ECC112 /* Main.storyboard */; };
+		CBDFD9272460917200AF02B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBDFD9262460917100AF02B2 /* GoogleService-Info.plist */; };
+		CBDFD9292460922800AF02B2 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDFD9282460922800AF02B2 /* CadastroViewController.swift */; };
+		CBDFD92B2460923600AF02B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDFD92A2460923600AF02B2 /* LoginViewController.swift */; };
+		CBDFD92D2460AE8500AF02B2 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDFD92C2460AE8500AF02B2 /* FavoritosTableViewController.swift */; };
+		CBDFD92F2460BB0000AF02B2 /* FavoritosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDFD92E2460BB0000AF02B2 /* FavoritosTableViewCell.swift */; };
 		CBE819FB245300D600A56972 /* GaleriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE819F9245300D600A56972 /* GaleriaTableViewCell.swift */; };
 		CBE819FC245300D600A56972 /* GaleriaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE819FA245300D600A56972 /* GaleriaTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DAA7731C19041686F95A9DE /* Pods_ShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A0EE8F4DF7B3200F0A2A4E3 /* Pods-ShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB304C962453226400640AA1 /* PesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
 		CB304C9824533CF400640AA1 /* ProdutoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoManager.swift; sourceTree = "<group>"; };
 		CB304C9A24533DD100640AA1 /* ProdutoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoData.swift; sourceTree = "<group>"; };
 		CB304C9C24533F8900640AA1 /* ProdutoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoModel.swift; sourceTree = "<group>"; };
-		CB331AA02448FDEA004632E4 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB331AA02448FDEA004632E4 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB331AA32448FDEA004632E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB331AA52448FDEA004632E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriaViewController.swift; sourceTree = "<group>"; };
@@ -44,8 +52,14 @@
 		CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBrain.swift; sourceTree = "<group>"; };
 		CB331AC22449E66B004632E4 /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
 		CB4247252451256F00ECC112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBDFD9262460917100AF02B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CBDFD9282460922800AF02B2 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		CBDFD92A2460923600AF02B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CBDFD92C2460AE8500AF02B2 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
+		CBDFD92E2460BB0000AF02B2 /* FavoritosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewCell.swift; sourceTree = "<group>"; };
 		CBE819F9245300D600A56972 /* GaleriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriaTableViewCell.swift; sourceTree = "<group>"; };
 		CBE819FA245300D600A56972 /* GaleriaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaleriaTableViewCell.xib; sourceTree = "<group>"; };
+		E68F136BBA5BA3DF6874D5A8 /* Pods-ShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.release.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,24 +67,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3F8C10DC3C070EA3B95075 /* Pods_ShoppingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6D1E4E87D80397E6217E92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DAA7731C19041686F95A9DE /* Pods_ShoppingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE4CFC910D2319743885AE74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EE8F4DF7B3200F0A2A4E3 /* Pods-ShoppingApp.debug.xcconfig */,
+				E68F136BBA5BA3DF6874D5A8 /* Pods-ShoppingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CB331A972448FDEA004632E4 = {
 			isa = PBXGroup;
 			children = (
 				CB331AA22448FDEA004632E4 /* ShoppingApp */,
 				CB331AA12448FDEA004632E4 /* Products */,
+				AE4CFC910D2319743885AE74 /* Pods */,
+				0E6D1E4E87D80397E6217E92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CB331AA12448FDEA004632E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB331AA02448FDEA004632E4 /* ShoppingApp.app */,
+				CB331AA02448FDEA004632E4 /* MusicApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +120,7 @@
 				CB331AAC2448FDEC004632E4 /* Assets.xcassets */,
 				CB331AAE2448FDEC004632E4 /* LaunchScreen.storyboard */,
 				CB331AB12448FDEC004632E4 /* Info.plist */,
+				CBDFD9262460917100AF02B2 /* GoogleService-Info.plist */,
 			);
 			path = ShoppingApp;
 			sourceTree = "<group>";
@@ -97,6 +132,9 @@
 				CB331ABA2449C82C004632E4 /* CarrinhoViewController.swift */,
 				CB331ABC2449C840004632E4 /* ProdutoViewController.swift */,
 				CB304C962453226400640AA1 /* PesquisaViewController.swift */,
+				CBDFD9282460922800AF02B2 /* CadastroViewController.swift */,
+				CBDFD92A2460923600AF02B2 /* LoginViewController.swift */,
+				CBDFD92C2460AE8500AF02B2 /* FavoritosTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CB4247242451256F00ECC112 /* Main.storyboard */,
+				CBDFD92E2460BB0000AF02B2 /* FavoritosTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,11 +154,11 @@
 				CB331ABE2449CD70004632E4 /* Produto.swift */,
 				CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */,
 				CB331AC22449E66B004632E4 /* Compra.swift */,
-				CBE819F9245300D600A56972 /* GaleriaTableViewCell.swift */,
-				CBE819FA245300D600A56972 /* GaleriaTableViewCell.xib */,
 				CB304C9824533CF400640AA1 /* ProdutoManager.swift */,
 				CB304C9A24533DD100640AA1 /* ProdutoData.swift */,
 				CB304C9C24533F8900640AA1 /* ProdutoModel.swift */,
+				CBE819F9245300D600A56972 /* GaleriaTableViewCell.swift */,
+				CBE819FA245300D600A56972 /* GaleriaTableViewCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB331AB42448FDEC004632E4 /* Build configuration list for PBXNativeTarget "ShoppingApp" */;
 			buildPhases = (
+				30D291A293F412F2E9F09317 /* [CP] Check Pods Manifest.lock */,
 				CB331A9C2448FDEA004632E4 /* Sources */,
 				CB331A9D2448FDEA004632E4 /* Frameworks */,
 				CB331A9E2448FDEA004632E4 /* Resources */,
+				35E04BFBB9B5E6E9A6CAD786 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +182,7 @@
 			);
 			name = ShoppingApp;
 			productName = ShoppingApp;
-			productReference = CB331AA02448FDEA004632E4 /* ShoppingApp.app */;
+			productReference = CB331AA02448FDEA004632E4 /* MusicApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDFD9272460917200AF02B2 /* GoogleService-Info.plist in Resources */,
 				CB4247262451257000ECC112 /* Main.storyboard in Resources */,
 				CBE819FC245300D600A56972 /* GaleriaTableViewCell.xib in Resources */,
 				CB331AB02448FDEC004632E4 /* LaunchScreen.storyboard in Resources */,
@@ -191,6 +233,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30D291A293F412F2E9F09317 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShoppingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35E04BFBB9B5E6E9A6CAD786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB331A9C2448FDEA004632E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,11 +283,15 @@
 				CB304C9924533CF400640AA1 /* ProdutoManager.swift in Sources */,
 				CB331ABD2449C840004632E4 /* ProdutoViewController.swift in Sources */,
 				CB331AC32449E66B004632E4 /* Compra.swift in Sources */,
+				CBDFD92B2460923600AF02B2 /* LoginViewController.swift in Sources */,
 				CB304C9B24533DD100640AA1 /* ProdutoData.swift in Sources */,
+				CBDFD92D2460AE8500AF02B2 /* FavoritosTableViewController.swift in Sources */,
 				CB331ABF2449CD70004632E4 /* Produto.swift in Sources */,
+				CBDFD9292460922800AF02B2 /* CadastroViewController.swift in Sources */,
 				CB304C9D24533F8900640AA1 /* ProdutoModel.swift in Sources */,
 				CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */,
 				CB331ABB2449C82C004632E4 /* CarrinhoViewController.swift in Sources */,
+				CBDFD92F2460BB0000AF02B2 /* FavoritosTableViewCell.swift in Sources */,
 				CB331AA82448FDEA004632E4 /* GaleriaViewController.swift in Sources */,
 				CB331AA42448FDEA004632E4 /* AppDelegate.swift in Sources */,
 				CB304C972453226400640AA1 /* PesquisaViewController.swift in Sources */,
@@ -350,6 +438,7 @@
 		};
 		CB331AB52448FDEC004632E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0EE8F4DF7B3200F0A2A4E3 /* Pods-ShoppingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,8 +449,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = idea9.ShoppingApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ilanaconcilio.musicApp;
+				PRODUCT_NAME = MusicApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,6 +459,7 @@
 		};
 		CB331AB62448FDEC004632E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E68F136BBA5BA3DF6874D5A8 /* Pods-ShoppingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,8 +470,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = idea9.ShoppingApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ilanaconcilio.musicApp;
+				PRODUCT_NAME = MusicApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

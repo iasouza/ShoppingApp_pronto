@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProdutoViewController: UIViewController {
 
@@ -15,64 +16,82 @@ class ProdutoViewController: UIViewController {
     @IBOutlet weak var discoLabel: UILabel!
     @IBOutlet weak var anoLabel: UILabel!
     @IBOutlet weak var capaImage: UIImageView!
-    @IBOutlet weak var precoLabel: UILabel!
-    @IBOutlet weak var quantidadeLabel: UILabel!
-    @IBOutlet weak var qtdStepper: UIStepper!
+
+    @IBOutlet weak var favoritoBotao: UIButton!
+    
+    let db = Firestore.firestore()
+    var estaNaLista: Bool = false
     
     var nomeBanda: String?
     var nomeDisco: String?
     var ano: String?
-    var preco: Double?
     var capa: String?
-    var quantidade = 1.0
+   
+    var documentID: String = "
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       
+        if let disco = self.nomeDisco{
+        db.collection("favoritos").whereField("Disco", isEqualTo: disco)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    if querySnapshot!.documents.count > 0 {
+                        self.favoritoBotao.isSelected = true
+                        self.estaNaLista = true
+                        for document in querySnapshot!.documents{
+                            self.documentID = document.documentID
+                    }
+                }
+        }
+        
+        }
+        
+    
         bandaLabel.text = nomeBanda
         discoLabel.text = nomeDisco
         anoLabel.text = ano
-//        precoLabel.text = String(format:"R$ %.2f", preco ?? 0.00)
+
         if let capaString = capa{
             let capaURL = URL(string: capaString)
             if let capaEnd = capaURL{
                    capaImage.load(url: capaEnd)
             }
         }
-        
-        capaImage.image = UIImage(named: capa ?? "ACDC.jpg")
-//        quantidadeLabel.text = String(format: "%.0f",qtdStepper.value)
+    
         
     }
-    
-//    @IBAction func voltarGaleria(_ sender: UIButton) {
-//        dismiss(animated: true, completion: nil)
-//    }
-//
-//    @IBAction func qtdValueChanged(_ sender: UIStepper) {
-//        quantidade = qtdStepper.value
-//        quantidadeLabel.text = String(format: "%.0f",qtdStepper.value)
-//    }
-//
-//    @IBAction func comprarProduto(_ sender: UIButton) {
-//
-//        performSegue(withIdentifier: "goToCart", sender: nil)
-//    }
-//
-//
-    // MARK: - Navigation
-
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "goToCart"{
-//            let destinationVC = segue.destination as! CarrinhoViewController
-//            destinationVC.nomeDisco = nomeDisco
-//            destinationVC.capa = capa
-//            destinationVC.preco = preco
-//            destinationVC.quantidade = quantidade
-//        }
-//    }
-
+    }
+    @IBAction func Favoritar(_ sender: UIButton) {
+        
+        
+        
+        if estaNaLista == false{
+                
+                if let messageSender = Auth.auth().currentUser?.email{
+                    db.collection("favoritos").addDocument(data: ["sender": messageSender, "Disco": nomeDisco, "Banda": nomeBanda, "Ano": ano, "Capa": capa ]) { (error) in
+                        if let e = error {
+                            print (e.localizedDescription)
+                        }else{
+                            self.favoritoBotao.isSelected.toggle()
+                            print("Salvo com sucesso")
+                        }
+                    }
+              }
+        }else{
+            db.collection("favoritos").document(documentID).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    self.favoritoBotao.isSelected.toggle()
+                    
+                }
+            }
+        }
+       
+    }
 }
 

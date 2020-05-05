@@ -12,6 +12,5 @@ struct Produto{
     let nomeDisco: String
     let nomeBanda: String
     let ano: String
-    let preco: Double
     let capa: String
 }
