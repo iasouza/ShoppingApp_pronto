@@ -27,7 +27,7 @@ class ProdutoViewController: UIViewController {
     var ano: String?
     var capa: String?
    
-    var documentID: String = "
+    var documentID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
