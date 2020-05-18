@@ -21,7 +21,8 @@ class PesquisaViewController: UIViewController, UITextFieldDelegate {
         pesquisaTextField.delegate = self
         pesquisaTextField.text = ""
         if let nome = defaults.string(forKey: "nome"){
-            chamadaLabel.text = "Ola, \(nome)! Escolha a banda:"}
+            chamadaLabel.text = "Ola, \(nome)! Escolha a banda:"
+        }
     }
     
     @IBAction func PesquisarBanda(_ sender: UIButton) {
@@ -31,8 +32,8 @@ class PesquisaViewController: UIViewController, UITextFieldDelegate {
             if texto != ""{
                 DispatchQueue.main.async(){
                     self.performSegue(withIdentifier: "goToGaleria", sender: nil)
-                    }
-               
+                }
+                
             }
         }
         
@@ -56,7 +57,7 @@ class PesquisaViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "goToGaleria"{
             let destinationVC = segue.destination as! GaleriaViewController
             destinationVC.nomeBandaTeste = pesquisaTextField.text
-             pesquisaTextField.text = ""
+            pesquisaTextField.text = ""
             
         }
         
@@ -66,24 +67,24 @@ class PesquisaViewController: UIViewController, UITextFieldDelegate {
         
         pesquisaTextField.endEditing(true)
         if let texto = pesquisaTextField.text{
-        if texto != ""{
-            DispatchQueue.main.async(){
-                self.performSegue(withIdentifier: "goToGaleria", sender: nil)
+            if texto != ""{
+                DispatchQueue.main.async(){
+                    self.performSegue(withIdentifier: "goToGaleria", sender: nil)
+                }
+                
             }
-          
+            
         }
-       
-    }
-     return true
+        return true
     }
     @IBAction func fazerLogout(_ sender: Any) {
         do {
-                try Auth.auth().signOut()
-                navigationController?.popToRootViewController(animated: true)
-            } catch let signOutError as NSError {
-                print ("Erro no logout: %@", signOutError)
-            }
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print ("Erro no logout: %@", signOutError)
         }
+    }
     
 }
 

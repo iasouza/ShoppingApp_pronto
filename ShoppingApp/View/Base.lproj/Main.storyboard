@@ -241,7 +241,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACDC" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-YV-2Bh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-YV-2Bh">
                                         <rect key="frame" x="79" y="155" width="256" height="256.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="256" id="3CV-SQ-hU6"/>
@@ -331,13 +331,23 @@
                                                 <constraint firstAttribute="height" constant="80" id="hSU-8U-JqW"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-9b-6XV">
+                                            <rect key="frame" x="125" y="43.5" width="249" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="bnv-9b-6XV" firstAttribute="centerY" secondItem="X6r-fW-p2Q" secondAttribute="centerY" id="0tj-Zw-ljx"/>
                                         <constraint firstItem="A1H-Ob-9iB" firstAttribute="centerY" secondItem="X6r-fW-p2Q" secondAttribute="centerY" id="7P2-NM-JcX"/>
                                         <constraint firstItem="rPU-uI-yUx" firstAttribute="top" secondItem="X6r-fW-p2Q" secondAttribute="topMargin" constant="10" id="SkD-k7-fAM"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="rPU-uI-yUx" secondAttribute="trailing" constant="5" id="e6w-qI-oRN"/>
                                         <constraint firstItem="A1H-Ob-9iB" firstAttribute="leading" secondItem="X6r-fW-p2Q" secondAttribute="leadingMargin" constant="5" id="g12-R1-TDn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bnv-9b-6XV" secondAttribute="trailing" constant="20" id="i6b-N9-dyf"/>
                                         <constraint firstItem="rPU-uI-yUx" firstAttribute="leading" secondItem="A1H-Ob-9iB" secondAttribute="trailing" constant="5" id="kNO-ag-a0l"/>
+                                        <constraint firstItem="bnv-9b-6XV" firstAttribute="centerX" secondItem="X6r-fW-p2Q" secondAttribute="centerX" id="nRv-f1-Bgt"/>
+                                        <constraint firstItem="bnv-9b-6XV" firstAttribute="leading" secondItem="A1H-Ob-9iB" secondAttribute="trailing" constant="20" id="pyn-58-Ich"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="rPU-uI-yUx" secondAttribute="bottom" constant="10" id="wKl-zN-iTU"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -345,6 +355,7 @@
                                     <outlet property="banda" destination="150-uh-iX8" id="EZT-2j-YrJ"/>
                                     <outlet property="capa" destination="A1H-Ob-9iB" id="yn3-pI-cPA"/>
                                     <outlet property="nome" destination="Uq9-WL-2lG" id="AN9-he-Fs8"/>
+                                    <outlet property="semFavoritos" destination="bnv-9b-6XV" id="eIj-p1-MqM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -354,10 +365,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xAl-mH-qyH"/>
+                    <connections>
+                        <segue destination="8ax-L3-nTQ" kind="show" identifier="goToDetail" id="FAY-2Q-h73"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAo-gw-6Nr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="895"/>
+            <point key="canvasLocation" x="879.71014492753625" y="894.64285714285711"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ega-qN-4AX">
@@ -374,15 +388,15 @@
                                     <constraint firstAttribute="width" constant="100" id="qop-Hl-JvP"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="souza.ilana@gmail.com" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3Y-VG-CCV">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3Y-VG-CCV">
                                 <rect key="frame" x="20" y="298" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="barneygigi" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-YG-ayf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-YG-ayf">
                                 <rect key="frame" x="20" y="362" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73H-2C-uGF">
                                 <rect key="frame" x="177" y="456" width="60" height="30"/>
@@ -502,10 +516,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="FAY-2Q-h73"/>
         <segue reference="vPY-0H-xe4"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="ACDC" width="256.5" height="256.5"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="imagemIcon" width="341" height="341"/>

@@ -17,11 +17,8 @@
 		CB331AA82448FDEA004632E4 /* GaleriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */; };
 		CB331AAD2448FDEC004632E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB331AAC2448FDEC004632E4 /* Assets.xcassets */; };
 		CB331AB02448FDEC004632E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB331AAE2448FDEC004632E4 /* LaunchScreen.storyboard */; };
-		CB331ABB2449C82C004632E4 /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABA2449C82C004632E4 /* CarrinhoViewController.swift */; };
 		CB331ABD2449C840004632E4 /* ProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABC2449C840004632E4 /* ProdutoViewController.swift */; };
 		CB331ABF2449CD70004632E4 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331ABE2449CD70004632E4 /* Produto.swift */; };
-		CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */; };
-		CB331AC32449E66B004632E4 /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB331AC22449E66B004632E4 /* Compra.swift */; };
 		CB4247262451257000ECC112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4247242451256F00ECC112 /* Main.storyboard */; };
 		CBDFD9272460917200AF02B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBDFD9262460917100AF02B2 /* GoogleService-Info.plist */; };
 		CBDFD9292460922800AF02B2 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDFD9282460922800AF02B2 /* CadastroViewController.swift */; };
@@ -46,11 +43,8 @@
 		CB331AAC2448FDEC004632E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB331AAF2448FDEC004632E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB331AB12448FDEC004632E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB331ABA2449C82C004632E4 /* CarrinhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		CB331ABC2449C840004632E4 /* ProdutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoViewController.swift; sourceTree = "<group>"; };
 		CB331ABE2449CD70004632E4 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
-		CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBrain.swift; sourceTree = "<group>"; };
-		CB331AC22449E66B004632E4 /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
 		CB4247252451256F00ECC112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBDFD9262460917100AF02B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBDFD9282460922800AF02B2 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				CB331AA72448FDEA004632E4 /* GaleriaViewController.swift */,
-				CB331ABA2449C82C004632E4 /* CarrinhoViewController.swift */,
 				CB331ABC2449C840004632E4 /* ProdutoViewController.swift */,
 				CB304C962453226400640AA1 /* PesquisaViewController.swift */,
 				CBDFD9282460922800AF02B2 /* CadastroViewController.swift */,
@@ -152,8 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				CB331ABE2449CD70004632E4 /* Produto.swift */,
-				CB331AC02449CDEB004632E4 /* ShoppingBrain.swift */,
-				CB331AC22449E66B004632E4 /* Compra.swift */,
 				CB304C9824533CF400640AA1 /* ProdutoManager.swift */,
 				CB304C9A24533DD100640AA1 /* ProdutoData.swift */,
 				CB304C9C24533F8900640AA1 /* ProdutoModel.swift */,
@@ -282,15 +273,12 @@
 			files = (
 				CB304C9924533CF400640AA1 /* ProdutoManager.swift in Sources */,
 				CB331ABD2449C840004632E4 /* ProdutoViewController.swift in Sources */,
-				CB331AC32449E66B004632E4 /* Compra.swift in Sources */,
 				CBDFD92B2460923600AF02B2 /* LoginViewController.swift in Sources */,
 				CB304C9B24533DD100640AA1 /* ProdutoData.swift in Sources */,
 				CBDFD92D2460AE8500AF02B2 /* FavoritosTableViewController.swift in Sources */,
 				CB331ABF2449CD70004632E4 /* Produto.swift in Sources */,
 				CBDFD9292460922800AF02B2 /* CadastroViewController.swift in Sources */,
 				CB304C9D24533F8900640AA1 /* ProdutoModel.swift in Sources */,
-				CB331AC12449CDEB004632E4 /* ShoppingBrain.swift in Sources */,
-				CB331ABB2449C82C004632E4 /* CarrinhoViewController.swift in Sources */,
 				CBDFD92F2460BB0000AF02B2 /* FavoritosTableViewCell.swift in Sources */,
 				CB331AA82448FDEA004632E4 /* GaleriaViewController.swift in Sources */,
 				CB331AA42448FDEA004632E4 /* AppDelegate.swift in Sources */,

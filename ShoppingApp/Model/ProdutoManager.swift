@@ -10,25 +10,25 @@ import Foundation
 
 protocol ProdutoManagerDelegate {
     func didUpdateProduto(_ produtoManager: ProdutoManager, produtos: [ProdutoModel])
-
+    
 }
 
 struct ProdutoManager{
-     
+    
     
     var delegate: ProdutoManagerDelegate?
     
     let produtoURL = "https://theaudiodb.com/api/v1/json/1/searchalbum.php?"
     
     func fetchProduto(nomeArtista: String){
-           
-           let artista = nomeArtista.replacingOccurrences(of: " ", with: "_")
-           let urlString = "\(produtoURL)&s=\(artista)"
-           
-           performRequest(with: urlString)
-           
-       }
- 
+        
+        let artista = nomeArtista.replacingOccurrences(of: " ", with: "_")
+        let urlString = "\(produtoURL)&s=\(artista)"
+        
+        performRequest(with: urlString)
+        
+    }
+    
     func performRequest(with urlString: String){
         //1. Create URL
         if let url = URL(string: urlString){
@@ -60,7 +60,7 @@ struct ProdutoManager{
         
         do{
             let decodedData = try decoder.decode(ProdutoData.self, from: produtoData)
-        
+            
             while cont < decodedData.album.count {
                 let album = decodedData.album[cont].strAlbum ?? "Não encontrado"
                 let artista = decodedData.album[cont].strArtist ?? "Não encontrado"

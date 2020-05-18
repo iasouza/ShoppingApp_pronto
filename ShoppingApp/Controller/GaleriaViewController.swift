@@ -11,7 +11,7 @@ import Firebase
 
 class GaleriaViewController: UIViewController {
     
-    var shoppingBrain = ShoppingBrain()
+    
     var nomeBandaTeste: String!
     var nomeDisco: [String] = []
     var nomeBanda: [String] = []
@@ -24,7 +24,7 @@ class GaleriaViewController: UIViewController {
     var anoAlbum: String!
     
     var produtos: [ProdutoModel] = []
-
+    
     var produtoManager = ProdutoManager()
     
     @IBOutlet weak var nomeArtista: UILabel!
@@ -44,13 +44,13 @@ class GaleriaViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "goToProduct"{
-                    let destinationVC = segue.destination as! ProdutoViewController
-                    destinationVC.nomeDisco = album
-                    destinationVC.nomeBanda = artista
-                    destinationVC.ano = anoAlbum
-                    destinationVC.capa = capaAlbum
-                }
+        if segue.identifier == "goToProduct"{
+            let destinationVC = segue.destination as! ProdutoViewController
+            destinationVC.nomeDisco = album
+            destinationVC.nomeBanda = artista
+            destinationVC.ano = anoAlbum
+            destinationVC.capa = capaAlbum
+        }
     }
     
     @IBAction func fazerLogout(_ sender: UIBarButtonItem) {
@@ -66,21 +66,20 @@ class GaleriaViewController: UIViewController {
 extension GaleriaViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return produtos.count
+            return produtos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! GaleriaTableViewCell
         
             let capa = URL(string: produtos[indexPath.row].capa)
-            
             cell.nameLabel.text = produtos[indexPath.row].nomeDisco
             cell.bandaLabel.text = produtos[indexPath.row].nomeBanda
             if let capaURL = capa{
                 cell.albumImageView.load(url: capaURL)
-        }
-         return cell
+            }
+            
+        return cell
     }
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 
 struct ProdutoModel{
-  
+    
     let nomeDisco: String
     let nomeBanda: String
     let ano: String
